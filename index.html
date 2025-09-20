@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PollyGlot – AI Translation</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="title">PollyGlot</h1>
+      <p class="subtitle">Accurate translations, every time.</p>
+    </header>
+
+    <section id="form-view" class="card">
+      <form id="translate-form" class="form">
+        <label for="sourceText" class="label">Text to translate</label>
+        <textarea id="sourceText" class="input" placeholder="Type or paste your text..." rows="6" required></textarea>
+
+        <fieldset class="fieldset">
+          <legend class="label">Choose language</legend>
+          <div class="radio-group">
+            <label class="radio">
+              <input type="radio" name="targetLang" value="French" checked>
+              <span>French</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="targetLang" value="Spanish">
+              <span>Spanish</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="targetLang" value="Japanese">
+              <span>Japanese</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="controls">
+          <button id="translateBtn" type="submit" class="button primary">Translate</button>
+        </div>
+
+        <p id="error" class="error" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="result-view" class="card hidden">
+      <h2 class="section-title">Results</h2>
+      <div class="result-block">
+        <h3 class="result-label">Original text</h3>
+        <p id="originalText" class="result-text"></p>
+      </div>
+      <div class="result-block">
+        <h3 class="result-label">Your translation</h3>
+        <p id="translatedText" class="result-text"></p>
+      </div>
+      <div class="controls">
+        <button id="startOverBtn" class="button secondary">Start Over</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Built for Week 10 – PollyGlot</small>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
