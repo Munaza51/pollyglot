@@ -1,5 +1,6 @@
+// aiService.js
 export async function translateText(text, targetLanguage) {
-  const API_KEY = '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'; // 👈 put your OpenRouter API key
+  const API_KEY = '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';
 
   const payload = {
     model: 'gpt-4o-mini',
@@ -36,8 +37,8 @@ export async function translateText(text, targetLanguage) {
     const translation = data?.choices?.[0]?.message?.content?.trim();
 
     if (!translation) throw new Error('No translation returned.');
-
     return translation;
+
   } catch (err) {
     console.error(err);
     throw new Error(err.message || 'AI service error.');
