@@ -1,7 +1,0 @@
-name = "pollyglot-worker"
-main = "worker.js"
-compatibility_date = "2024-10-01"
-
-[vars]
-# Optional: default model override
-# MODEL = "gpt-4o-mini"
